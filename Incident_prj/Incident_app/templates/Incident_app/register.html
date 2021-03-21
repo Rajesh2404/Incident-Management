@@ -1,0 +1,31 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+<div>
+    <h1 style="text-align: center;">Register</h1>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-7">
+            <div class="card card-body h-100">
+                <form method="POST" action="">
+                    {% csrf_token %}
+                    <label>{{form.username.label}}</label>
+                    {{form.username}}
+                    <br>
+                    <label>{{form.password1.label}}</label>
+                    {{form.password1}}
+                    <br>
+                    <label>{{form.password2.label}}</label>
+                    {{form.password2}}
+                    <br>
+                    <input style="margin-top:10px ;" class="btn btn-sm btn-primary" type="submit" value="Register">
+                </form>
+                <p style="text-align: center;">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+            </div>
+        </div>
+    </div>
+</div>

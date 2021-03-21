@@ -1,0 +1,26 @@
+{% extends 'Incident_app/main.html' %}
+{% block body_block %}
+
+<div>
+    <h3 style="text-align: center;">Incidents</h3>
+    {% for incident in incidents %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card card-body h-100">
+                    <div>
+                        <span>{{incident.date}}</span>&nbsp;&nbsp;&nbsp;
+                        <span>{{incident.location}}</span>
+                        <a class="btn btn-sm btn-primary" href="{% url 'incident' incident.id %}">View</a>
+                        <a class="btn btn-sm btn-warning" href="{% url 'incident-delete' incident.id %}">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <h3>No Incident History</h3>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+form {
+	transition: all 4s ease-in-out;
+	text-align: center;
+}
+.form-style {
+	width: 80%;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid #50d1c0;
+	color: #606060;
+	font-size: 18px;
+	margin-bottom: 16px;
+}
+input {
+	height: 35px;
+}
+form .submit {
+	background: #00abff;
+	border-color: transparent;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 2px;
+	height: 50px;
+	margin-top: 20px;
+	border-radius: 4px;
+}
+form .submit:hover {
+	background: #80d5ff;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+}

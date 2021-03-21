@@ -1,0 +1,26 @@
+{% extends 'Incident_app/main.html' %}
+{% block body_block %}
+
+<h3 style="text-align: center;">Incident Details</h3>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card card-body h-100">
+                <div>
+                    <p><label><b>Posted BY: </b> &nbsp;</label>{{incident.user}}</p>
+                    <p><label><b>Location: </b>&nbsp;</label>{{incident.location}}</p>
+                    <p><label><b>Department: </b>&nbsp;</label>{{incident.department}}</p>
+                    <p><label><b>Date: </b>&nbsp;</label>{{incident.date}}</p>
+                    <p><label><b>Time: </b>&nbsp;</label>{{incident.time}}</p>
+                    <p><label><b>Incident Location: </b>&nbsp;</label>{{incident.incident_location}}</p>
+                    <p><label><b>Severity: </b>&nbsp;</label>{{incident.severity}}</p>
+                    <p><label><b>Cause: </b>&nbsp;</label>{{incident.cause}}</p>
+                    <p><label><b>Action Taken: </b>&nbsp;</label>{{incident.action_taken}}</p>
+                    <p><label><b>Sub Incident: </b>&nbsp;</label>{{incident.sub_incident}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

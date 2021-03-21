@@ -1,0 +1,21 @@
+{% extends 'Incident_app/main.html' %}
+{% block body_block %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card card-body h-100">
+                <div class="header-bar">
+                    <a href="{% url 'incidents' %}">&#8592;Go Back</a>
+                </div>
+                <br>
+                <form method="POST">
+                    {% csrf_token %}
+                    <p>Are your sure you want to delete this incident?</p>
+                    <input class="btn btn-sm btn-primary" type="submit" value="Delete" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
